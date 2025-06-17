@@ -11,11 +11,18 @@ public class App {
         ab.insert(54);
         ab.insert(14);
         ab.insert(19);
+
         System.out.println("In-order");
         ab.imprimirArbolInOrder();
         System.out.println("\nPre-Order");
         ab.imprimirArbolPreOrder();
         System.out.println("\nPost-Order");
         ab.imprimirArbolPostOrder();
+
+        System.out.println("\nBuscar 23");
+        System.out.println(ab.search(23));
+        if(!ab.search(77)){
+            System.out.println("No encontro");
+        }
     }
 }

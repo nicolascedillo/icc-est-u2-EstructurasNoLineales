@@ -66,5 +66,21 @@ public class ArbolBinario{
         }
     }
 
+    public boolean search(int value){
+        return searchRec(root, value);
+    }
+
+    private boolean searchRec(Node node, int value){
+        if(node == null){
+            return false;
+        }
+
+        if(value<node.getValue()){
+            return searchRec(node.getLeft(), value);
+        }else if(value>node.getValue()){
+            return searchRec(node.getRight(), value);
+        }
+        return true;
+    }
 
 }
