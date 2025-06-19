@@ -12,8 +12,6 @@ public class App {
         ab.insert(14);
         ab.insert(19);
 
-        System.out.println("In-order");
-        ab.imprimirArbolInOrder();
         System.out.println("\nPre-Order");
         ab.imprimirArbolPreOrder();
         System.out.println("\nPost-Order");
@@ -24,5 +22,31 @@ public class App {
         if(!ab.search(77)){
             System.out.println("No encontro");
         }
+
+        System.out.println("Nombre: Nicolas Cedillo");
+
+        System.out.println("\nAltura: " + ab.getHeight());
+
+        System.out.println("Weight: " + ab.getWeight());
+
+        System.out.println("In-order");
+        ab.imprimirArbolInOrder();
+
+        System.out.println("\nIn-Order con altura");
+        ab.imprimirArbolInOrderWithHeight();
+
+        System.out.println("\nIn-Order con equilibrio");
+        ab.imprimirArbolInOrderEquilibrio();
+
+        System.out.println("\n\nEsta equilibrado: " + ab.estaEquilibrado());
+        System.out.println("Agregamos el valor: " + 15);
+        ab.insert(15);
+
+        System.out.println("\nIn-Order con equilibrio");
+        ab.imprimirArbolInOrderEquilibrio();
+        System.out.println("\nEsta equilibrado: " + ab.estaEquilibrado());
+
+        System.out.println("Nodos desequilibrados: ");
+        ab.listadoDesequilibrados();
     }
 }
